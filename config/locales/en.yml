@@ -16,18 +16,63 @@
 #
 # This would use the information in config/locales/es.yml.
 #
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  r_on_r: "Ruby on Rails"
+  app_name: "Rails Tutorial"
+  sample_app: "Sample App"
+  rails_tutorial: "Ruby on Rails Tutorial"
+  author: "Michael Hartl"
+  news: "News"
+  the: "The"
+  by: "by"
+  home: "Home"
+  help: "Help"
+  log_in: "Log In"
+  about: "About"
+  contact: "Contact"
+  form_contain: "The form contain"
+  error: "error"
+  welcome_to_app: "Welcome to sample app"
+  create_my_account: "Create my account"
+  confirmation: "Confirmation"
+  new_user: "New user?"
+  error_login_message: "Invalid Email/Passowrd"
+  log_out: "Log Out"
+  users_header: "Users"
+  profile: "Profile"
+  setting: "Setting"
+  account: "Account"
+  delete: "Delete"
+  static_pages:
+    about:
+      title: "About"
+      book: "book"
+      screencast: "screencast series"
+      sentence_1: "This is the sample application for the tutorial."
+      sentence_2: "to teach web development with"
+      the: "the"
+      is_a: "is a"
+      and: "and"
+    contact:
+      title: "Contact"
+      sentence: "Contact the Ruby on Rails Tutorial about the sample app at the"
+      page: "contact page"
+    help:
+      title: "Help"
+      sentence_1: "Get help on the Ruby on Rails Tutorial at the"
+      sentence_2: "To get help on this sample app, see the"
+      rails_help: "Rails Tutorial help section."
+      book: "book"
+    home:
+      title: "Home"
+      welcome: "Welcome to the Sample App"
+      sign_up: "Sign Up Now!"
+      home_page_show: "This is the home page for"
+      rails_app_title: "sample application."
+      rails_logo: "Rails logo"
+  users:
+    sign_up: "Sign up"
+    sentence_1: "This will be a signup page for new users."
