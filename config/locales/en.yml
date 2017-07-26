@@ -20,12 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  r_on_r: "Ruby on Rails"
   app_name: "Rails Tutorial"
   sample_app: "Sample App"
   rails_tutorial: "Ruby on Rails Tutorial"
   author: "Michael Hartl"
-  news: "News"
+  new: "News"
   the: "The"
   by: "by"
   home: "Home"
@@ -35,17 +34,19 @@ en:
   contact: "Contact"
   form_contain: "The form contain"
   error: "error"
-  welcome_to_app: "Welcome to the sample app"
+  welcome_to_app: "Welcome to sample app!"
+  not_exist_user: "User not found."
   create_my_account: "Create my account"
   confirmation: "Confirmation"
   new_user: "New user?"
-  error_login_message: "Invalid Email/Passowrd"
+  error_login_message: "Invalid Email/Password"
   log_out: "Log Out"
   users_header: "Users"
   profile: "Profile"
   setting: "Setting"
   account: "Account"
   delete: "Delete"
+  comma: ","
   static_pages:
     about:
       title: "About"
@@ -64,7 +65,7 @@ en:
       title: "Help"
       sentence_1: "Get help on the Ruby on Rails Tutorial at the"
       sentence_2: "To get help on this sample app, see the"
-      rails_help: "Rails Tutorial help section."
+      rails_help: "Rails Tutorial help section"
       book: "book"
     home:
       title: "Home"
@@ -72,7 +73,69 @@ en:
       sign_up: "Sign Up Now!"
       home_page_show: "This is the home page for"
       rails_app_title: "sample application."
-      rails_logo: "Rails logo"
+      img-alt: "Rails logo"
   users:
-    sign_up: "Sign up"
-    sentence_1: "This will be a signup page for new users."
+    please_log_in: "Please Log in"
+    new:
+      sign_up: "Sign Up"
+      sentence_1: "This will be a signup page for new users."
+    index:
+      all_users: "All users"
+    create:
+      check_email: "Please check your email to activate your account."
+    edit:
+      edit_user: "Edit User"
+      update_your_profile: "Update Your Profile"
+      confirmation: "Confirmation"
+      save_changes: "Save Changes"
+      change: "change"
+    update:
+      updated: "Profile updated"
+    destroy:
+      user_deleted: "User deleted"
+    user:
+      delete: "delete"
+      you_sure: "You sure"
+  sessions:
+    new:
+      remember_me: "Remember me on this computer"
+      forgot_password: "(forgot password)"
+    create:
+      check_email: "Account not activated. Check your email for the activation link."
+    edit:
+      account_activated: "Account activated!"
+      invalid_activation_link: "Invalid activation link"
+  user_mailer:
+    account_activation:
+      title: "Account Activation"
+      hi: "Hi %{user_name},"
+      account_activation: "Account Activation"
+      activate_account: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+      sample_app: "Sample App"
+    password_reset:
+      title: "Password Reset"
+      hi: "Hi %{user_name},"
+      find_me: "Find me"
+      reset_instruction_1: "To reset your password click the link below:"
+      reset_instruction_2: "This link will expire in two hours. If you did not request your password to be reset, please ignore this email and
+      your password will stay as it is."
+      reset_pw: "Reset password"
+  password_resets:
+    new:
+      forgot_password: "Forgot Password"
+      submit: "Submit"
+    create:
+      instructions: "Email sent with password reset instructions"
+      email_not_found: "Email address not found"
+    edit:
+      reset_password: "Reset password"
+      confirmation: "Confirmation"
+      update_password: "Update Password"
+    update:
+      cant_be_empty: "Can't be empty"
+      password_has_been_reset: "Password has been reset"
+    check_expiration:
+      password_expired: "Password reset has expired."
+    get_user:
+      invalid_email: "Invalid Email"
