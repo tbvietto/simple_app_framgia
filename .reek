@@ -7,3 +7,6 @@ IrresponsibleModule:
 exclude_paths:
   - 'vendor'
   - 'db/migrate'
+
+Attribute:
+  enabled: false
