@@ -1,3 +1,4 @@
+
 class User < ApplicationRecord
   attr_accessor :remember_token
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -12,7 +13,7 @@ class User < ApplicationRecord
     uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true, length:
-    {minimum: Settings.email_length_min.to_i}
+    {minimum: Settings.email_length_min.to_i}, allow_nil: true
 
   class << self
     def digest string
@@ -28,6 +29,10 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+  end
+
+  def current_user? user
+    self == user
   end
 
   def remember
