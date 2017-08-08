@@ -5,9 +5,9 @@ class SessionsController < ApplicationController
     session = params[:session]
     user = User.find_by email: session[:email].downcase
     if user && user.authenticate(session[:password])
-      log_in_success user
+      handle_valid_login user, session
     else
-      log_in_fail
+      handle_invalid_login
     end
   end
 
@@ -18,14 +18,28 @@ class SessionsController < ApplicationController
 
   private
 
-  def log_in_success user
+  def handle_valid_login user, session
+    if user.activated?
+      handle_activated_user user, session
+    else
+      handle_unactivated_user
+    end
+  end
+
+  def handle_invalid_login
+    flash.now[:danger] = t "error_login_message"
+    render :new
+  end
+
+  def handle_activated_user user, session
     log_in user
-    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+    session[:remember_me] == "1" ? remember(user) : forget(user)
     redirect_back_or user
   end
 
-  def log_in_fail
-    flash.now[:danger] = t "error_login_message"
-    render :new
+  def handle_unactivated_user
+    message = t ".create.check_email"
+    flash[:warning] = message
+    redirect_to root_url
   end
 end
